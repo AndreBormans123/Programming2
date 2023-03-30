@@ -1,4 +1,4 @@
-from student import *
+from studemt import *
 
 
 def test_queue():

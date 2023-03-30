@@ -4,7 +4,7 @@ Write a function `contains_a(string)` that checks whether `string` contains an `
 You can achieve using the regex `.*a.*`. However, let's do it a bit differently.
 
 Until now, you've always used the `re.fullmatch(regex, string)` function. This function
-demands that the *entire* string satisfies the pattern described by `regex`.
+demands that the _entire_ string satisfies the pattern described by `regex`.
 In general, however, this is not how regexes behave.
 
 Take a look at regexes in other languages:
@@ -26,15 +26,15 @@ new Regex(regex).IsMatch(string)
 
 ```javascript
 // JavaScript
-/regex/.exec(string)
+/regex/.exec(string);
 ```
 
 All these implementations differ from `re.fullmatch` in that they
-only expect a *substring* of `string` to satisfy the pattern.
+only expect a _substring_ of `string` to satisfy the pattern.
 
 For example, consider the regex `a`. In Python, `re.fullmatch('a', string)`
 only returns a truthy value if `string` equals `a`, because `fullmatch`
-requires the *entire* string to be described. In other words, `re.fullmatch('a', 'bab')` is not a match.
+requires the _entire_ string to be described. In other words, `re.fullmatch('a', 'bab')` is not a match.
 
 In the other languages, however, matching the regex `a` with the string `bab` will succeed since the regex will be interpreted as "There is a substring of `bab` that matches the regex `a`." It is important you are aware of this distinction to avoid unpleasant surprises in the future.
 

@@ -92,15 +92,15 @@ So, in essence, there's nothing new really: you simply have to know how to name 
 There are many other operators, e.g., `-`, `*`, `/`, `%`, etc.
 Each of them have a [corresponding method](https://docs.python.org/3/reference/datamodel.html):
 
-|Operator|Method|
-|-|-|
-| `+` | `__add__` |
-| `-` | `__sub__` |
-| `*` | `__mul__` |
-| `/` | `__truediv__` |
-| `//` | `__floordiv__` |
-| `%` | `__mod__` |
-| `**` | `__pow__` |
+| Operator | Method         |
+| -------- | -------------- |
+| `+`      | `__add__`      |
+| `-`      | `__sub__`      |
+| `*`      | `__mul__`      |
+| `/`      | `__truediv__`  |
+| `//`     | `__floordiv__` |
+| `%`      | `__mod__`      |
+| `**`     | `__pow__`      |
 
 As you might have noticed, these methods share a pattern: they're all enclosed by two underscores (`__`).
 For this reason, they're often called [dunder methods](https://wiki.python.org/moin/DunderAlias).
@@ -160,7 +160,7 @@ RuntimeError("Mismatched currencies!")
 ```
 
 Finally, we also want to be able to multiply a `Money` with a number.
-Notice that we are *not* multiplying two `Money`s together, but a `Money` with an `int` or `float`.
+Notice that we are _not_ multiplying two `Money`s together, but a `Money` with an `int` or `float`.
 
 ```python
 >>> Money(20, "EUR") * 5
